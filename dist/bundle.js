@@ -9,7 +9,8 @@ let dataGrid = grid.init(linesNb, columnsNb);
 
 dataGrid.forEach(line => {
     line.forEach(square => {
-        createHTMLSquare(square.colorize().getColor());
+        square.colorize();
+        createHTMLSquare(square.getColor());
     });
 });
 
@@ -86,14 +87,6 @@ function isASquareBorder(position) {
     return position !== 1 && position !== totalSquare && (position % 5 === 0 || (position - 1) % 5 === 0);
 }
 
-function colorizeSquares() {
-    grid.forEach(line => {
-        line.forEach(square => {
-            square.colorize();
-        });
-    });
-}
-
 function Square(_position) {
     let status = isSquareColorizable();
     let position = _position;
@@ -120,6 +113,7 @@ function Square(_position) {
 
     function colorize() {
         if (!status) {
+            color = '-';
             return;
         }
         switch (countActivesSquares(position)) {
@@ -135,14 +129,15 @@ function Square(_position) {
             case 4:
                 color = 'r';
                 break;
+            default:
+                color = '-';
+                break;
         }
-        return this;
     }
 }
 
 module.exports = {
-    init: init,
-    colorizeSquares: colorizeSquares
+    init: init
 };
 
 },{"lodash":3}],3:[function(require,module,exports){

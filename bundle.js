@@ -8,8 +8,9 @@ let dataGrid = grid.init(linesNb, columnsNb);
 
 dataGrid.forEach((line) => {
     line.forEach((square) => {
+        square.colorize();
         createHTMLSquare(
-            square.colorize().getColor()
+            square.getColor()
         );
     });
 });
