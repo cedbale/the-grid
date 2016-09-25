@@ -8,11 +8,11 @@ The Grid is just a technical test to realize
 
 ## Build dependencies
 
-  npm install
+  `npm install`
 
 ## Run in CLI
 
-  npm start
+  `npm start`
 
 ## Run in a browser
 
@@ -20,4 +20,8 @@ The Grid is just a technical test to realize
 
 ## Run tests
 
-  npm test
+  `npm test`
+
+## Re-render the html
+
+  `npm run build-html`
