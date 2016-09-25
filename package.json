@@ -4,7 +4,7 @@
   "description": "The grid is a technical test",
   "main": "index.js",
   "scripts": {
-    "build-html": "browserify bundle.js -o dist/bundle.js -t babelify --presets es2015",
+    "build-html": "mkdir ./dist && browserify bundle.js -o dist/bundle.js -t babelify --presets es2015",
     "start": "node index.js",
     "postinstall": "npm run build-html",
     "test": "./node_modules/mocha/bin/mocha test"
