@@ -1,20 +1,21 @@
 {
   "name": "grid",
   "version": "1.0.0",
-  "description": "",
+  "description": "The grid is a technical test",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "postinstall": "browserify bundle.js -o dist/bundle.js -t babelify --presets es2015",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha test"
   },
-  "author": "",
+  "author": "Cédric Balé",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.16.1"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
-    "babelify": "^7.3.0"
+    "babelify": "^7.3.0",
+    "mocha": "^3.0.2"
   }
 }
