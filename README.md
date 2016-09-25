@@ -1,8 +1,10 @@
-# Grid  
+# The Grid  
+
+The Grid is just a technical test to realize
 
 ## Install the project :
 
-  git clone <MyURL>
+  Clone this repository
 
 ## Build dependencies
 
@@ -12,7 +14,7 @@
 
   npm start
 
-## Run from a browser
+## Run in a browser
 
   open `index.html`
 
